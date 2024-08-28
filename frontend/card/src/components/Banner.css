@@ -1,14 +1,16 @@
 /* src/components/Banner.css */
 
 .banner {
-    background-color: #f0f0f0; /* Grey background color */
+    background-color: #c8c5eb; /* Grey background color */
     padding: 20px;
     text-align: center;
     height: 200px;
 }
 
 .banner-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.05px;
     margin-bottom: 20px;
 }
 
