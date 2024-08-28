@@ -1,5 +1,6 @@
 // backend/routes/cardRoutes.js
 const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 const Card = require('../models/Card');
 
@@ -20,7 +21,8 @@ router.post('/cards', async (req, res) => {
         await card.save();
         res.status(201).json(card);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error(error); // Log the error for debugging
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
     }
 });
 
@@ -30,7 +32,8 @@ router.get('/cards', async (req, res) => {
         const cards = await Card.find();
         res.json(cards);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error(error); // Log the error for debugging
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
     }
 });
 
@@ -45,7 +48,8 @@ router.get('/cards/:title', async (req, res) => {
         }
         res.json(card);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error(error); // Log the error for debugging
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
     }
 });
 
