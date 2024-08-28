@@ -1,0 +1,50 @@
+/* src/components/Banner.css */
+
+.banner {
+    background-color: #f0f0f0; /* Grey background color */
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+
+.banner-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 60%; /* Adjust width as needed */
+    font-size: 1rem;
+}
+
+.search-button {
+    background-color: black; /* Color for the arrow button */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: black; /* Darker shade for hover effect */
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: black; /* Change border color on focus */
+}
